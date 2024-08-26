@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia do Thiago</title>
+    <style>
+       body {
+           font-family: 'Franklin Gothic Medium';
+           margin: 10px; 
+           padding: 10px;
+        }
+       header {
+           text-align: center;
+           background-color: #ffffff; 
+           padding: 20px; 
+        }
+       .tabs {
+           overflow: hidden;
+           background-color: #615e5e; 
+       }
+       .tab {
+           float: left; 
+       }
+       .tab button {
+           background-color: inherit;
+           border: none;
+           outline: none; 
+           cursor: pointer; 
+           padding: 15px 15px; 
+           transition: 0.3s; 
+       }
+       .tab button:hover { 
+           background-color: #fc0404; 
+       }
+       .tabcontent { 
+          display: none;
+          clear: both; 
+       }
+    </style> 
+</head>
+<body> 
+    <header> 
+        <h1>Thiago Lopes Silva</h1>
+        <img src="c:\Users\Thiago Lopes\OneDrive\Área de Trabalho\html.biografia\thiago 1.jpg" width="500" height="500" alt="Thiago Lopes Silva">
+        <p>Sou estudante da Uninter no curso de Análise e Desenvolvimento de Sistemas. Trabalho com vendas na área de esquadria de alumínio.</p>
+    </header>
+
+    <div class="tabs">
+        <div class="tab"> 
+            <button class="tablinks" onclick="openTab(event, 'home')">Página Inicial</button>
+        </div>   
+        <div class="tab"> 
+            <button class="tablinks" onclick="openTab(event, 'education')">Formação Educacional</button>
+        </div> 
+        <div class="tab"> 
+            <button class="tablinks" onclick="openTab(event, 'personalLife')">Vida Pessoal</button>
+        </div>  
+        <div class="tab"> 
+            <button class="tablinks" onclick="openTab(event, 'Formulario')">Formulário</button>
+        </div> 
+    </div>
+
+    <div id="home" class="tabcontent" style="display: block;"> 
+        <h2><center>Página Inicial</center></h2> 
+        <p>
+            <center> 
+            Esta imagem de comida mexicana foi colocada pois é meu tipo de comida favorito.<br>
+            O tempero e a pimenta da comida a tornam muito boa.<br>
+            Sem contar que a gastronomia é um dos meus hobbies.
+            </center>
+        </p>
+        <center>
+            <img src="c:\Users\Thiago Lopes\OneDrive\Área de Trabalho\biografia thiago htmll\comida mexicana img.jpeg" width="515" height="400" alt="Comida Mexicana">
+        </center>
+    </div> 
+
+    <div id="education" class="tabcontent"> 
+        <h2><center>Formação Educacional Thiago Lopes Silva</center></h2>
+        <p><center>
+            Terminei o ensino médio, logo após fiz alguns cursos, como digitação e pacotes Office.<br>
+            Comecei a trabalhar nas Lojas Americanas, onde fiquei por 5 anos na área de vendas.<br>
+            E esse ano resolvi começar o curso de Análise e Desenvolvimento de Sistemas na Uninter.
+            </center>
+        </p>
+        <center>
+            <img src="c:\Users\Thiago Lopes\OneDrive\Área de Trabalho\biografia thiago htmll\trabalho img.jpeg" width="515" height="400" alt="Imagem de Estudos">
+        </center>
+    </div>      
+ 
+    <div id="Formulario" class="tabcontent"> 
+        <h1>Formulário Simples</h1>
+        <form action="" method="post"> 
+            <table>
+                <tr> 
+                    <th>
+                        <label for="nome">Nome:</label> 
+                    </th> 
+                    <td> 
+                        <input type="text" name="nome" id="nome"> 
+                    </td>
+                </tr> 
+                <tr> 
+                    <th>     
+                        <label for="email">E-mail:</label> 
+                    </th> 
+                    <td> 
+                        <input type="email" name="email" id="email"> 
+                    </td> 
+                </tr> 
+                <tr> 
+                    <th>     
+                        <label for="msg">Digite sua Mensagem:</label> 
+                    </th> 
+                    <td> 
+                        <textarea name="msg" rows="5" cols="40">Digite sua mensagem</textarea> 
+                    </td> 
+                </tr> 
+                <tr>
+                    <td></td>
+                    <td>  
+                        <button type="submit">Enviar</button> 
+                    </td> 
+                </tr> 
+            </table> 
+        </form> 
+    </div> 
+
+    <div id="personalLife" class="tabcontent"> 
+        <h2><center>Vida Pessoal de Thiago Lopes Silva</center></h2> 
+        <p> 
+            <center> 
+                Minha vida pessoal: sou natural de São Paulo, mas vim morar em Caraguatatuba com 15 anos de idade.<br>
+                Atualmente moro em Ubatuba com a minha namorada e meus dois cachorros. Recentemente consegui um emprego na área de esquadria de alumínio.
+            </center>
+        </p> 
+        <center>         
+            <img src="c:\Users\Thiago Lopes\OneDrive\Área de Trabalho\biografia thiago htmll\imagem vida.png" alt="Imagem de Vida Pessoal" width="520" height="405">
+        </center> 
+    </div>
+
+    <script> 
+        function openTab(evt, tabName) { 
+            var i, tabcontent, tablinks; 
+            tabcontent = document.getElementsByClassName("tabcontent"); 
+            for (i = 0; i < tabcontent.length; i++) { 
+                tabcontent[i].style.display = "none"; 
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) { 
+                tablinks[i].classList.remove("active"); 
+            }
+            document.getElementById(tabName).style.display = "block"; 
+            evt.currentTarget.classList.add("active"); 
+        }
+    </script> 
+</body> 
+</html>
